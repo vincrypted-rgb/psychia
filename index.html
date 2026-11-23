@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Circle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="logo" id="logo">Circle</div>
+  <div class="me hidden" id="me-chip"></div>
+</header>
+
+<main id="screen-code" class="screen card">
+  <h1>Welcome</h1>
+  <p>Enter the participant code you were given.</p>
+  <input id="code-input" type="text" maxlength="12" autocomplete="off" autocapitalize="characters" placeholder="Participant code">
+  <button id="code-btn" class="primary">Continue</button>
+  <p id="code-error" class="error hidden"></p>
+</main>
+
+<main id="screen-message" class="screen card hidden">
+  <h1 id="message-title"></h1>
+  <p id="message-body"></p>
+</main>
+
+<main id="screen-intro" class="screen card hidden">
+  <h1>Before you begin</h1>
+  <div id="intro-text" class="prewrap"></div>
+  <label class="check"><input type="checkbox" id="intro-check"> I'm ready to begin and understand I can stop at any time.</label>
+  <button id="intro-btn" class="primary" disabled>Continue</button>
+</main>
+
+<main id="screen-profile" class="screen card hidden">
+  <h1>Your profile</h1>
+  <div id="profile-text" class="prewrap"></div>
+  <div id="profile-body"></div>
+</main>
+
+<main id="screen-feed" class="screen feed hidden">
+  <div id="posts"></div>
+  <div class="center"><button id="finish-btn" class="secondary">I'm finished</button></div>
+</main>
+
+<main id="screen-debrief" class="screen card hidden">
+  <h1>Thank you for participating</h1>
+  <div id="debrief-text" class="prewrap"></div>
+  <hr>
+  <div id="withdraw-text" class="prewrap"></div>
+  <button id="withdraw-btn" class="secondary">Remove my data from the study</button>
+  <p id="withdraw-done" class="hidden"><b>Your data has been removed.</b></p>
+</main>
+
+<div id="modal-root"></div>
+<div id="toast" class="toast hidden"></div>
+
+<script src="config.js"></script>
+<script src="api.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
